@@ -35,6 +35,13 @@ call plug#begin()
     " Startify
     Plug 'mhinz/vim-startify'
 
+    " Signify --- Git
+    if has('nvim') || has('patch-8.0.902')
+      Plug 'mhinz/vim-signify'
+    else
+      Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
+    endif
+
     " Themes
     Plug 'NLKNguyen/papercolor-theme'
     Plug 'vim-airline/vim-airline'

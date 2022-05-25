@@ -33,3 +33,13 @@ set nobackup
 set nowritebackup
 set updatetime=200
 set shortmess+=c
+
+augroup FileJinjaType
+    autocmd!
+    autocmd BufNewFile,BufRead *.html :set filetype=jinja.html
+augroup END
+
+augroup Format
+    autocmd!
+    autocmd BufWritePre *.html :normal mZgg=G`Z:delmarks Z
+augroup END

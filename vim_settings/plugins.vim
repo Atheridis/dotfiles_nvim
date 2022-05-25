@@ -42,10 +42,16 @@ call plug#begin()
       Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
     endif
 
+    " Fugitive --- Git
+    Plug 'tpope/vim-fugitive'
+
     " Themes
     Plug 'NLKNguyen/papercolor-theme'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+
+    " Jinja Support
+    Plug 'lepture/vim-jinja'
 
 call plug#end()
 

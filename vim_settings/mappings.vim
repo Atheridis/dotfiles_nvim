@@ -62,3 +62,5 @@ inoremap <C-M-j> <C-Down>
 inoremap <C-M-k> <C-Up>
 inoremap <C-M-l> <C-Right>
 
+" Re-source vim
+inoremap <M-CR> :source ~/.config/nvim/init.vim

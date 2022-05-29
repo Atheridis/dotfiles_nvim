@@ -17,6 +17,10 @@ call plug#begin()
     Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'PhilRunninger/nerdtree-visual-selection'
 
+    " Bar
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
 
@@ -46,12 +50,17 @@ call plug#begin()
     Plug 'tpope/vim-fugitive'
 
     " Themes
+    " PaperColor
     Plug 'NLKNguyen/papercolor-theme'
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+
+    " Pop-punk
+    Plug 'bignimbus/pop-punk.vim'
 
     " Jinja Support
     Plug 'lepture/vim-jinja'
+
+    " For Python f string highlighting
+    Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 

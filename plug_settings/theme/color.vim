@@ -1,3 +1,3 @@
-set background=light
-colo PaperColor
-let g:airline_theme='papercolor'
+set background=dark
+colo pop-punk
+let g:airline_theme='pop_punk'

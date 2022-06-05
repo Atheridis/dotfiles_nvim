@@ -53,10 +53,10 @@ vnoremap("p", "\"_dP")
 vnoremap("<M-j>", ":m .+1<CR>==")
 vnoremap("<M-k>", ":m .-2<CR>==")
 
-xnoremap("J", ":move '>+1<CR>gv-gv", opts)
-xnoremap("K", ":move '<-2<CR>gv-gv", opts)
-xnoremap("<A-j>", ":move '>+1<CR>gv-gv", opts)
-xnoremap("<A-k>", ":move '<-2<CR>gv-gv", opts)
+xnoremap("J", ":move '>+1<CR>gv-gv")
+xnoremap("K", ":move '<-2<CR>gv-gv")
+xnoremap("<A-j>", ":move '>+1<CR>gv-gv")
+xnoremap("<A-k>", ":move '<-2<CR>gv-gv")
 
 -- Terminal --
 -- Better terminal navigation
@@ -64,3 +64,7 @@ tnoremap("<C-h>", "<C-\\><C-N><C-w>h")
 tnoremap("<C-j>", "<C-\\><C-N><C-w>j")
 tnoremap("<C-k>", "<C-\\><C-N><C-w>k")
 tnoremap("<C-l>", "<C-\\><C-N><C-w>l")
+
+-- Telescope
+nnoremap("<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>")
+nnoremap("<C-t>", "<cmd>Telescope live_grep<CR>")

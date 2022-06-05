@@ -10,7 +10,6 @@ local options = {
     pumheight = 10,
     smartcase = true,
     smartindent = true,
-    smartindent = true,
     splitbelow = true,
     splitright = true,
     swapfile = false,

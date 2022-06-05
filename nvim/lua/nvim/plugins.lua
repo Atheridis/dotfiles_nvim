@@ -26,7 +26,7 @@ vim.cmd [[
 -- Use a protected call so we don't error out on the first use
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
-    vim.notify("Error with require packer") 
+    vim.notify("Error with require packer")
     return
 end
 
@@ -61,27 +61,35 @@ return packer.startup(function(use)
         use "navarasu/onedark.nvim"
 
         -- cmp Plugins
-        use 'hrsh7th/nvim-cmp'
-        use 'hrsh7th/cmp-buffer'
-        use 'hrsh7th/cmp-path'
-        use 'hrsh7th/cmp-cmdline'
-        use 'saadparwaiz1/cmp_luasnip'
-        use 'hrsh7th/cmp-nvim-lsp'
-        use 'hrsh7th/cmp-nvim-lua'
+        use "hrsh7th/nvim-cmp"
+        use "hrsh7th/cmp-buffer"
+        use "hrsh7th/cmp-path"
+        use "hrsh7th/cmp-cmdline"
+        use "saadparwaiz1/cmp_luasnip"
+        use "hrsh7th/cmp-nvim-lsp"
+        use "hrsh7th/cmp-nvim-lua"
 
         -- snippets
-        use 'L3MON4D3/LuaSnip'
+        use "L3MON4D3/LuaSnip"
         use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
         -- LSP
         use "neovim/nvim-lspconfig" -- enable LSP
         use "williamboman/nvim-lsp-installer" -- simple to use language server installer
 
+        --Telescope
+        use {
+          "nvim-telescope/telescope.nvim",
+          requires = { {"nvim-lua/plenary.nvim"} },
+        }
+
+        use "BurntSushi/ripgrep"
+
         -- Commenter
         use {
-            'numToStr/Comment.nvim',
+            "numToStr/Comment.nvim",
             config = function()
-                require('Comment').setup()
+                require("Comment").setup()
             end
         }
 

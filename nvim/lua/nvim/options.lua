@@ -18,7 +18,7 @@ local options = {
 	undofile = true,
 	updatetime = 300,
 	writebackup = false,
-	expandtab = false,
+	expandtab = true,
 	shiftwidth = 4,
 	tabstop = 4,
 	number = true,
@@ -37,3 +37,24 @@ vim.opt.shortmess:append("c")
 for k, v in pairs(options) do
 	vim.opt[k] = v
 end
+
+vim.cmd([[
+	augroup Markdown
+		autocmd!
+		autocmd FileType markdown set wrap
+	augroup END
+]])
+
+vim.cmd([[ 
+	augroup Format
+		autocmd!
+		autocmd BufWritePre *.html :normal mZgg=G`Z:delmarks Z
+	augroup END
+]])
+
+vim.cmd([[
+	augroup FormatOnSave
+		autocmd!
+		autocmd BufWritePre * :Format 
+	augroup END
+]])

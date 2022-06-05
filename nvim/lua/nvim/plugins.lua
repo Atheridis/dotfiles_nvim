@@ -122,11 +122,20 @@ return packer.startup(function(use)
 		"kyazdani42/nvim-web-devicons",
 	} })
 
+	-- Lualine
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "kyazdani42/nvim-web-devicons", opt = true },
+	})
+
 	-- For quick movement between a file
 	use("ggandor/leap.nvim")
 
 	-- Shows hex colours
 	use("norcalli/nvim-colorizer.lua")
+
+	-- Toggle Terminal
+	use("akinsho/toggleterm.nvim")
 
 	-- NON LUA PLUGINS
 	use("moll/vim-bbye")

@@ -79,11 +79,13 @@ return packer.startup(function(use)
 
         --Telescope
         use {
-          "nvim-telescope/telescope.nvim",
-          requires = { {"nvim-lua/plenary.nvim"} },
+            "nvim-telescope/telescope.nvim",
+            requires = {
+                { "nvim-lua/plenary.nvim" },
+                -- { "nvim-telescope/telescope-media-files.nvim" },
+                { "BurntSushi/ripgrep" },
+            },
         }
-
-        use "BurntSushi/ripgrep"
 
         -- Commenter
         use {
@@ -92,6 +94,23 @@ return packer.startup(function(use)
                 require("Comment").setup()
             end
         }
+
+		-- Treesitter
+		use {
+			"nvim-treesitter/nvim-treesitter",
+			run = ":TSUpdate",
+		}
+		use { "p00f/nvim-ts-rainbow" ,
+			requires = {
+				{ "nvim-treesitter/nvim-treesitter" }
+			}
+		}
+		use { "nvim-treesitter/playground" ,
+			requires = {
+				{ "nvim-treesitter/nvim-treesitter" }
+			}
+		}
+
 
         -- Autopairs
         use "windwp/nvim-autopairs"

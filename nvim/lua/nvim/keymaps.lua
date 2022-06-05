@@ -30,7 +30,7 @@ nnoremap("<C-j>", "<C-w>j")
 nnoremap("<C-k>", "<C-w>k")
 nnoremap("<C-l>", "<C-w>l")
 
-nnoremap("<leader>e", ":Lex 15<CR>")
+nnoremap("<leader>e", ":NvimTreeToggle<CR>")
 
 -- Resize
 nnoremap("<M-h>", ":vertical resize -2<CR>")

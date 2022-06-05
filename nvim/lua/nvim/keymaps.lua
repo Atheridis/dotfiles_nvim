@@ -1,19 +1,19 @@
 local opts = { noremap = true, silent = true }
 
 local function nnoremap(shortcut, command)
-    vim.keymap.set("n", shortcut, command, opts)
+	vim.keymap.set("n", shortcut, command, opts)
 end
 local function inoremap(shortcut, command)
-    vim.keymap.set("i", shortcut, command, opts)
+	vim.keymap.set("i", shortcut, command, opts)
 end
 local function vnoremap(shortcut, command)
-    vim.keymap.set("v", shortcut, command, opts)
+	vim.keymap.set("v", shortcut, command, opts)
 end
 local function xnoremap(shortcut, command)
-    vim.keymap.set("x", shortcut, command, opts)
+	vim.keymap.set("x", shortcut, command, opts)
 end
 local function tnoremap(shortcut, command)
-    vim.keymap.set("t", shortcut, command, opts)
+	vim.keymap.set("t", shortcut, command, opts)
 end
 
 -- Define leader key
@@ -47,7 +47,7 @@ inoremap("jk", "<ESC>")
 
 -- Don't copy replaced text into register
 -- while in visual mode, when pasting
-vnoremap("p", "\"_dP")
+vnoremap("p", '"_dP')
 
 -- Move text up and down
 vnoremap("<M-j>", ":m .+1<CR>==")
@@ -66,5 +66,8 @@ tnoremap("<C-k>", "<C-\\><C-N><C-w>k")
 tnoremap("<C-l>", "<C-\\><C-N><C-w>l")
 
 -- Telescope
-nnoremap("<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>")
+nnoremap(
+	"<leader>f",
+	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>"
+)
 nnoremap("<C-t>", "<cmd>Telescope live_grep<CR>")

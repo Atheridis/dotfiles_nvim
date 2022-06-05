@@ -94,6 +94,7 @@ return packer.startup(function(use)
                 require("Comment").setup()
             end
         }
+		use 'JoosepAlviste/nvim-ts-context-commentstring'
 
 		-- Treesitter
 		use {
@@ -105,15 +106,13 @@ return packer.startup(function(use)
 				{ "nvim-treesitter/nvim-treesitter" }
 			}
 		}
-		use { "nvim-treesitter/playground" ,
-			requires = {
-				{ "nvim-treesitter/nvim-treesitter" }
-			}
-		}
-
 
         -- Autopairs
         use "windwp/nvim-autopairs"
+
+		-- Git
+		use "lewis6991/gitsigns.nvim"
+
     -- PLUGINS END --
 
 

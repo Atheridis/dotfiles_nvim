@@ -13,11 +13,18 @@ npairs.setup ({
         javascript = {"template_string"},
         java = false, -- don't check treesitter on java
     },
-    map_cr = false,
+    map_cr = true,
 })
+
+-- npairs.add_rules {
+-- 	Rule('{%', '%}', "html")
+-- 		:use_regex(false)
+-- }
 
 --Add spaces between parentheses
 npairs.add_rules {
+	Rule('{%', '%'),
+	Rule('{% ', ' '),
     Rule(' ', ' ')
         :with_pair(function (opts)
             local pair = opts.line:sub(opts.col - 1, opts.col)
@@ -40,8 +47,8 @@ npairs.add_rules {
         :with_move(function(opts)
             return opts.prev_char:match('.%]') ~= nil
         end)
-        :use_key(']')
-}--
+        :use_key(']'),
+}
 
 
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
@@ -56,3 +63,4 @@ cmp.event:on( 'confirm_done', cmp_autopairs.on_confirm_done({  map_char = { tex 
 
 -- add a lisp filetype (wrap my-function), FYI: Hardcoded = { "clojure", "clojurescript", "fennel", "janet" }
 cmp_autopairs.lisp[#cmp_autopairs.lisp+1] = "racket"
+

@@ -137,6 +137,9 @@ return packer.startup(function(use)
 	-- Toggle Terminal
 	use("akinsho/toggleterm.nvim")
 
+	-- Faster Plugin loading
+	use("lewis6991/impatient.nvim")
+
 	-- NON LUA PLUGINS
 	use("moll/vim-bbye")
 

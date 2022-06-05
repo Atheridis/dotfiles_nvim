@@ -1,0 +1,7 @@
+require("nvim.options")
+require("nvim.keymaps")
+require("nvim.plugins")
+require("nvim.colorscheme")
+require("nvim.cmp")
+require("nvim.lsp")
+require("nvim.autopairs")

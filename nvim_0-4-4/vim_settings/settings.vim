@@ -21,6 +21,7 @@ augroup END
 set number relativenumber
 set hidden
 set nohlsearch
+set guicursor=i:block
 
 au BufEnter * set fo-=c
 au BufEnter * set fo-=o
@@ -31,7 +32,7 @@ set termguicolors
 
 set nobackup
 set nowritebackup
-set updatetime=200
+set updatetime=500
 set shortmess+=c
 
 augroup FileJinjaType

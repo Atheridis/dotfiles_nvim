@@ -62,6 +62,9 @@ call plug#begin()
     " For Python f string highlighting
     Plug 'sheerun/vim-polyglot'
 
+    " Assembly
+    Plug 'Shirk/vim-gas'
+
 call plug#end()
 
 " Coc List

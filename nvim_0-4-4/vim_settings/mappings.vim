@@ -14,10 +14,10 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Use alt +hjkl to resize windows
-nnoremap <M-h> :vertical resize -2<CR>
-nnoremap <M-j> :resize -2<CR>
-nnoremap <M-k> :resize +2<CR>
-nnoremap <M-l> :vertical resize +2<CR>
+nnoremap <M-H> :vertical resize -2<CR>
+nnoremap <M-J> :resize -2<CR>
+nnoremap <M-K> :resize +2<CR>
+nnoremap <M-L> :vertical resize +2<CR>
 
 " Remap escape
 inoremap jkl <Esc>
@@ -63,4 +63,4 @@ inoremap <C-M-k> <C-Up>
 inoremap <C-M-l> <C-Right>
 
 " Re-source vim
-inoremap <M-CR> :source ~/.config/nvim/init.vim
+nnoremap <M-CR> :source ~/.config/nvim/init.vim<CR>

@@ -121,8 +121,22 @@ return packer.startup(function(use)
 	use({ "akinsho/bufferline.nvim", requires = {
 		"kyazdani42/nvim-web-devicons",
 	} })
+
+	-- For quick movement between a file
+	use("ggandor/leap.nvim")
+
+	-- Shows hex colours
+	use("norcalli/nvim-colorizer.lua")
+
+	-- NON LUA PLUGINS
 	use("moll/vim-bbye")
 
+	use("mitsuhiko/vim-jinja")
+	--
+	-- Surround
+	use("tpope/vim-surround")
+
+	use("unblevable/quick-scope")
 	-- PLUGINS END --
 
 	-- Automatically set up your configuration after cloning packer.nvim

@@ -51,10 +51,3 @@ vim.cmd([[
 		autocmd BufWritePre *.html :normal mZgg=G`Z:delmarks Z
 	augroup END
 ]])
-
-vim.cmd([[
-	augroup FormatOnSave
-		autocmd!
-		autocmd BufWritePre * :Format 
-	augroup END
-]])

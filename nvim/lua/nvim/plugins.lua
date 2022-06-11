@@ -106,6 +106,13 @@ return packer.startup(function(use)
 		{ "nvim-treesitter/nvim-treesitter" },
 	} })
 
+	use({
+		"nvim-treesitter/nvim-treesitter-context",
+		requires = {
+			{ "nvim-treesitter/nvim-treesitter" },
+		},
+	})
+
 	-- Autopairs
 	use("windwp/nvim-autopairs")
 

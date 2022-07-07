@@ -19,7 +19,11 @@ configs.setup({
 		enable_autocmd = false,
 	},
 })
-vim.cmd("hi rainbowcol1 guifg=#FFFFFF")
+if vim.o.background == "light" then
+    vim.cmd("hi rainbowcol1 guifg=#000000")
+else
+    vim.cmd("hi rainbowcol1 guifg=#FFFFFF")
+end
 vim.cmd("hi rainbowcol2 guifg=#00FF00")
 vim.cmd("hi rainbowcol3 guifg=#2244FF")
 vim.cmd("hi rainbowcol4 guifg=#FF0000")

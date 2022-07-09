@@ -67,6 +67,8 @@ return packer.startup(function(use)
     -- In Vim, compat mode is turned on as Lush only works in Neovim.
     requires = "rktjmp/lush.nvim"
     }
+    use{"karoliskoncevicius/distilled-vim"}
+    use{"robertmeta/nofrils"}
 
 	-- cmp Plugins
 	use("hrsh7th/nvim-cmp")
@@ -163,6 +165,10 @@ return packer.startup(function(use)
 	use("tpope/vim-surround")
 
 	use("unblevable/quick-scope")
+
+    -- Fixing a bug with python indentation and treesitter
+    use("Vimjas/vim-python-pep8-indent")
+
 	-- PLUGINS END --
 
 	-- Automatically set up your configuration after cloning packer.nvim

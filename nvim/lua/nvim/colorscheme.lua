@@ -10,6 +10,9 @@
 -- onedark.load()
 
 -- vim.cmd('colorscheme paramount')
-vim.cmd('set termguicolors')
-vim.cmd('set background=light')
-vim.cmd('colorscheme zenbones')
+--
+-- vim.cmd('set termguicolors')
+-- vim.cmd('set background=light')
+-- vim.cmd('colorscheme zenbones')
+--
+vim.cmd("colorscheme nofrils-acme")

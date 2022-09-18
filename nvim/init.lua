@@ -18,5 +18,6 @@ require("nvim.lualine")
 require("nvim.toggleterm")
 require("nvim.impatient")
 
-vim.cmd("highlight QuickScopePrimary guifg='#0f0' gui=underline ctermfg=155 cterm=underline")
-vim.cmd("highlight QuickScopeSecondary guifg='#f00' gui=underline ctermfg=81 cterm=underline")
+vim.cmd("highlight QuickScopePrimary guifg='#00ff00' gui=underline ctermfg=105 cterm=underline")
+vim.cmd("highlight QuickScopeSecondary guifg='#ff0000' gui=underline ctermfg=81 cterm=underline")
+

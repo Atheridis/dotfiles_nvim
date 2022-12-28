@@ -17,7 +17,7 @@ require("nvim.colorizer")
 require("nvim.lualine")
 require("nvim.toggleterm")
 require("nvim.impatient")
+require("nvim.ts-autotag")
 
 vim.cmd("highlight QuickScopePrimary guifg='#00ff00' gui=underline ctermfg=105 cterm=underline")
 vim.cmd("highlight QuickScopeSecondary guifg='#ff0000' gui=underline ctermfg=81 cterm=underline")
-

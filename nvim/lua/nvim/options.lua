@@ -30,6 +30,7 @@ local options = {
 	scrolloff = 8,
 	sidescrolloff = 8,
 	guifont = "monospace:h17",
+    mouse = "",
 }
 
 vim.opt.shortmess:append("c")
@@ -45,9 +46,9 @@ vim.cmd([[
 	augroup END
 ]])
 
-vim.cmd([[ 
-	augroup Format
-		autocmd!
-		autocmd BufWritePre *.html :normal mZgg=G`Z:delmarks Z
-	augroup END
-]])
+-- vim.cmd([[ 
+-- 	augroup Format
+-- 		autocmd!
+-- 		autocmd BufWritePre *.html :normal mZgg=G`Z:delmarks Z
+-- 	augroup END
+-- ]])

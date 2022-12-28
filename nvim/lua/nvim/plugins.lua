@@ -159,8 +159,10 @@ return packer.startup(function(use)
 	-- NON LUA PLUGINS
 	use("moll/vim-bbye")
 
-	use("mitsuhiko/vim-jinja")
-	--
+	--[[ use("mitsuhiko/vim-jinja") ]]
+    --[[ use("theHamsta/tree-sitter-jinja2") ]]
+    --[[ use("tpope/vim-endwise") ]]
+	
 	-- Surround
 	use("tpope/vim-surround")
 
@@ -169,6 +171,10 @@ return packer.startup(function(use)
     -- Fixing a bug with python indentation and treesitter
     use("Vimjas/vim-python-pep8-indent")
 
+    -- HTML Tag Completer
+    use("windwp/nvim-ts-autotag")
+
+    --[[ use("ldelossa/nvim-ide") ]]
 	-- PLUGINS END --
 
 	-- Automatically set up your configuration after cloning packer.nvim

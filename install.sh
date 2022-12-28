@@ -1,5 +1,15 @@
 #!/bin/sh
 
+install_dependencies() {
+    if [[ -f /bin/dnf ]]
+    then
+        echo "installing dependencies"
+        sudo dnf install g++ libstdc++ -y
+    else
+        echo "Cannot find dnf, please install g++ and libstdc++ using your package manager"
+    fi
+}
+
 check_nvim_directory() {
 	if [ -d ~/.config/nvim ]; then
 		uuid=$(cat /proc/sys/kernel/random/uuid)
@@ -27,3 +37,4 @@ if [[ $version -eq 0 ]]; then
 elif [[ $version -eq 1 ]]; then
 	version_no_lua
 fi
+install_dependencies

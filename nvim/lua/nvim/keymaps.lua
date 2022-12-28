@@ -65,9 +65,15 @@ tnoremap("<C-j>", "<C-\\><C-N><C-w>j")
 tnoremap("<C-k>", "<C-\\><C-N><C-w>k")
 tnoremap("<C-l>", "<C-\\><C-N><C-w>l")
 
+nnoremap("<silent><F1>", '<Cmd>exe v:count1 . "ToggleTerm"<CR>')
+inoremap("<silent><F1>", '<Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>')
+
 -- Telescope
 nnoremap(
 	"<leader>f",
 	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>"
 )
 nnoremap("<C-t>", "<cmd>Telescope live_grep<CR>")
+
+-- Sane buffer delete
+nnoremap("<leader>bd", ":Bdelete<CR>")
